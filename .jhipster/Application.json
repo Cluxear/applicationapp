@@ -1,0 +1,38 @@
+{
+  "name": "Application",
+  "fields": [
+    {
+      "fieldName": "shortListed",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "creationDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "conclusion",
+      "fieldType": "ConclusionType",
+      "fieldValues": "HIRED,REJECTED,PENDING"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "applicationRecrutementStatus",
+      "otherEntityRelationshipName": "application",
+      "relationshipName": "status"
+    }
+  ],
+  "changelogDate": "20210313130103",
+  "entityTableName": "application",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "applicationapp",
+  "applications": "*",
+  "microserviceName": "applicationapp"
+}

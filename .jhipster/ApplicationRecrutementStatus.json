@@ -1,0 +1,35 @@
+{
+  "name": "ApplicationRecrutementStatus",
+  "fields": [
+    {
+      "fieldName": "addedAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "RecrutementStatus",
+      "fieldValues": "PRE_SELECTED,HR_INTERVIEW_FIXED,HR_INTERVIEW_PASSED,HR_INTERVIEW_FAILED"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "application",
+      "otherEntityRelationshipName": "status",
+      "relationshipName": "application",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210313130303",
+  "entityTableName": "application_recrutement_status",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "applicationapp",
+  "applications": "*",
+  "microserviceName": "applicationapp"
+}

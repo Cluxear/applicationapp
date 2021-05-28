@@ -1,0 +1,44 @@
+
+
+entity Application {
+  shortListed Boolean,
+  creationDate Instant,
+  conclusion ConclusionType
+  
+}
+entity RecrutementStatus {
+	
+    name String,
+    description String
+}
+entity ApplicationRecrutementStatus {
+
+	addedAt Instant,
+    status RecrutementStatus
+}
+enum ConclusionType{
+    HIRED,
+    REJECTED,
+    PENDING
+}
+enum RecrutementStatus { 
+    
+    	
+    PRE_SELECTED,
+    HR_INTERVIEW_FIXED,
+    HR_INTERVIEW_PASSED,
+    HR_INTERVIEW_FAILED
+    
+
+}
+relationship OneToMany {
+
+    Application{status} to ApplicationRecrutementStatus{application}
+    
+}
+
+// Use Data Transfer Objects (DTO)
+ dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl

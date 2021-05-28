@@ -1,0 +1,26 @@
+{
+  "name": "RecrutementStatus",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20210313130203",
+  "entityTableName": "recrutement_status",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "applicationapp",
+  "applications": "*",
+  "microserviceName": "applicationapp"
+}
